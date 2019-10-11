@@ -4,10 +4,9 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  let result = [];
-  for (let i = 0; i < nums.length; i++) {
-    let temp = target - nums[i];
-    let idx = nums.indexOf(temp);
+  const len = nums.length - 1
+  for (let i = 0; i < len; i++) {
+    let idx = nums.lastIndexOf(target - nums[i]);
     if (idx !== -1 && i !== idx) {
       return [i, idx]
     }
